@@ -1,6 +1,20 @@
 function playAudio() {
       let audio = document.getElementById("myAudio");
-      audio.play();
+
+      if (!audio.src || audio.src.trim() === "") {
+        alert("No audio available for this word");
+        return;
+    }
+    
+     audio.play()
+        .then(() => {
+            console.log("Audio playing...");
+        })
+        .catch(() => {
+            alert("Unable to play audio");
+        });
+
+      
     }
 
 // let btn=document.querySelector("button");
@@ -47,11 +61,12 @@ btn.addEventListener("click", async()=>{
     btn1.innerText="play";
     p.appendChild(btn1);
 
-    let audiourl=await getaudio(finalurl);
-    let audio = document.getElementById("myAudio");
-    audio.src=audiourl;
+    
 
     btn1.addEventListener("click",async ()=>{
+        let audiourl=await getaudio(finalurl);
+        let audio = document.getElementById("myAudio");
+        audio.src=audiourl;
         playAudio();
     })
    
