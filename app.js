@@ -35,6 +35,13 @@ inp.addEventListener("input",()=>{
 
       let h5=document.querySelector(".h5")
       h5.innerText="";
+
+       let phenotic=document.querySelector(".phenotic");
+        phenotic.innerText="";
+
+        let phenotics_pera=document.querySelector(".phenotics_pera");
+        phenotics_pera.innerText="";
+
     } else {
       btn.style.opacity = "0.5"; // Faded again if empty
     }
@@ -46,6 +53,8 @@ async function getmeaning(finalurl){
     try{
         let res= await axios.get(finalurl);
         let meaning= res.data[0].meanings[0].definitions[0].definition;
+
+      
         
         let h5=document.querySelector(".h5")
         h5.innerText="meaning";
@@ -54,6 +63,12 @@ async function getmeaning(finalurl){
         p.innerText="";
         p.innerText=meaning;
         p.style.color="black";
+
+        let phenotic=document.querySelector(".phenotic");
+        phenotic.innerText="Phonetics";
+
+        let phenotics_pera=document.querySelector(".phenotics_pera");
+        phenotics_pera.innerText=res.data[0].phonetics[0].text;
     }
     catch(e){
         let p=document.querySelector("p");
