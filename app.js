@@ -32,6 +32,9 @@ inp.addEventListener("input",()=>{
 
       let playbutton=document.querySelector(".play");
       playbutton.style.display="none";
+
+      let h5=document.querySelector(".h5")
+      h5.innerText="";
     } else {
       btn.style.opacity = "0.5"; // Faded again if empty
     }
@@ -43,6 +46,10 @@ async function getmeaning(finalurl){
     try{
         let res= await axios.get(finalurl);
         let meaning= res.data[0].meanings[0].definitions[0].definition;
+        
+        let h5=document.querySelector(".h5")
+        h5.innerText="meaning";
+
         let p=document.querySelector("p");
         p.innerText="";
         p.innerText=meaning;
