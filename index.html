@@ -1,18 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <input placeholder="enter word"/>
 
-  <audio id="myAudio" src="https://api.dictionaryapi.dev/media/pronunciations/en/run-au.mp3">Your browser does not support the audio tag.</audio>
-  
-  <button>click me</button>
-  <p></p>
-    <script src="app.js"></script>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+   <link rel="stylesheet" href="style.css">
+   <link rel="icon" href="data:,">
+
+
+</head>
+
+<body>
+   <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+   <audio id="myAudio" src="https://api.dictionaryapi.dev/media/pronunciations/en/run-au.mp3">Your browser does not
+      support the audio tag.</audio>
+   <h1>Word Meaning Finder...</h1>
+
+   <div class="container">
+      <h3 class="line">What word are you thinking of? 🤔</h3>
+      <div class="mainbox">
+
+         <input placeholder="enter word" class="inp" />
+         <button class="get_btn">Find</button>
+         <button class="play"></button>
+
+      </div>
+
+      <div class="mean_pera">
+         <h5></h5>
+         <p class="meaning"></p>
+      </div>
+
+   </div>
+   <script src="app.js"></script>
 </body>
+
 </html>

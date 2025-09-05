@@ -1,0 +1,90 @@
+.play{
+  background-color: transparent;
+  border : none;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.audio{
+    display: none;
+}
+
+.play:active{
+    transform:scale(0.9);
+}
+
+.mainbox{
+    display: flex;
+    align-items: center;
+    position:relative;
+    left:1rem;
+    top:1rem;
+}
+
+.get_btn{
+    margin-left: 0.5rem;
+    border : none;
+    height :2rem;
+    width :4rem;
+    border-radius: 0.7rem;
+    opacity: 0.5;
+    transition: transform 0.2s ease-in-out;
+    font-size: 1rem;
+
+    background-color: #3B82F6; /* Tailwind Blue-500 */
+    color: white;
+}
+
+.get_btn:active {
+  transform: scale(0.9); /* dabane par chhota ho jayega smoothly */
+}
+.inp{
+     height :1.5rem;
+     border-radius: 0.4rem;
+     border: 2px solid gray;
+}
+
+.inp:focus{
+    border: 2px solid #3B82F6; 
+    outline: none;
+    box-shadow: 0 0 5px rgba(59, 130, 246, 0.5);
+}
+
+.meaning{
+    font-size: 1.1rem;
+}
+
+body {
+  background: #f4f6f9; /* light grey */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 7rem;
+  margin-right: 7rem;
+  
+
+
+  
+}
+
+.container{
+    border:2px,solid,black;
+    height:38rem;
+    width:40rem;
+    border-radius: 1rem;
+}
+
+.line{
+    margin-top: 1rem;
+    margin-left:1rem;
+    margin-bottom: 0rem;
+}
+
+.meaning{
+    margin-left: 1rem;
+}
+
+
+
+
+
